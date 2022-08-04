@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 20px;
+        }
+        button{
+            margin-left:108px ;
+            margin-top: 20px;
+        }
+        div{
+            margin: auto;
+        }
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_g10QiS7_2e3zH3QBI_cebcF3vzbABuPzgQ&usqp=CAU");
+        }
+    </style>
+</head>
+<body>
+   <div>
+    Đoán từ
+    <input type="text" id="a">
+    Đến
+    <input type="text" id="b">
+    Tôi đoán số
+    <input type="text" id="c"><br>
+    <button onclick="click_choi()">CHƠI</button>
+   </div>
+    <script>
+        function click_choi(){
+            var a=parseFloat(document.getElementById('a').value);
+            var b=parseFloat(document.getElementById('b').value);
+            var c=parseFloat(document.getElementById('c').value);
+            function random(min, max){
+                var d=Math.floor(Math.random() * (max - min + 1)) + min;
+                return d;
+            }
+            var rand = random(a,b)
+            if(rand==c){
+                alert('Chúc mừng Bạn đã đoán đúng');
+            }else{
+                alert('Bạn đã đoán sai');
+            }
+        }
+
+    </script>
+</body>
+</html>

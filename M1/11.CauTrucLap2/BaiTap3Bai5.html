@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=20, sum=0;
+        for(i=0; i<n; i++){
+            var f0=0, f1=1, fn=1;
+            if(i==0 || i==1){
+                sum+=i;
+            }else{
+                for(var j=2; j<i; j++){
+                    f0=f1;
+                    f1=fn;
+                    fn=f0+f1;
+                }
+                sum+=fn;
+            }
+        }
+        document.write('Tổng 20 số đầu dãy fibonacci = '+sum);
+    </script>
+</body>
+</html>

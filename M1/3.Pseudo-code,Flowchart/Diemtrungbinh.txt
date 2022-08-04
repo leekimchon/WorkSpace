@@ -1,0 +1,5 @@
+BEGIN
+INPUT toan, ly, hoa
+	trungbinh = (toan+ly+hoa)/3
+DISPLAY trungbinh
+END

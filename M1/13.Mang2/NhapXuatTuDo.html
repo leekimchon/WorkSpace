@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseFloat(prompt('Nhap so hang'));
+        var m=parseFloat(prompt('Nhap so cot'));
+        var tusach=[];
+        for(var i=0; i<n; i++){
+            tusach[i]=[]
+            for(j=0; j<m; j++){
+                tusach[i][j]=parseFloat(prompt('Nhap phan tu '+'['+i+']'+'['+j+']'))
+            };
+        };
+        for(var i=0; i<n; i++){
+            for(var j=0; j<m; j++){
+                document.write(tusach[i][j]+' ');
+            };
+            document.write('<br>')
+        };
+        var a=tusach.length;
+        consle.log(a);
+    </script>
+</body>
+</html>

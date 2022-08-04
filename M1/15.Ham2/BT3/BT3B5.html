@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt('Nhap ten ngoi sao')
+        function search(a){
+            var b=0;
+            var arr1=['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+            var arr2=['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+            for(var i=0; i<arr1.length; i++){
+                if(arr1[i]==a){
+                    alert('Ngoi sao '+a+' co chom sao '+arr2[i]);
+                    b++;
+                };
+            };
+            if(b==0){
+                alert('Khong co ngoi sao '+a);
+            };
+        };
+        search(a);
+    </script>
+</body>
+</html>

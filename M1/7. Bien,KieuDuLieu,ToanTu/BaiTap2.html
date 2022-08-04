@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="number"></td>
+            <td>
+                <select id="tr">
+                    <option>VNĐ</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="sa">
+                    <option>VNĐ</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="Convert()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    Result = 
+    <div id="ketqua"></div>
+    <script>
+        function Convert(){
+            var nhap = document.getElementById("number").value;
+            var truoc = document.getElementById("tr").value;
+            var sau = document.getElementById("sa").value;
+            if(truoc == "VNĐ" && sau == "USD"){
+                document.getElementById('ketqua').innerHTML = nhap / 23000 + ' USD';
+            }else if(truoc == "USD" && sau == "VNĐ"){
+                document.getElementById('ketqua').innerHTML = nhap * 23000 + ' VNĐ';
+            }else{
+                document.getElementById('ketqua').innerHTML = nhap;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+I) Giao Diện
+    1) User
+        - Trang chủ
+        - Trang danh mục sản phẩm
+        - Trang chi tiết sản phẩm
+        - Trang giỏi hàng
+        - Trang thanh toán
+        - Trang liên hệ
+    2) Admin
+        - Quản lý tài khoản
+        - Đăng ký
+        - Đăng nhập
+        - Quản lý thương hiệu
+        - Quản lý danh mục sản phẩm
+        - Quản lý sản phẩm
+        - Quản lý đơn hàng 
+        - Quản lý phản hồi
+II) Phân tích Database
+    1) roles
+        - id int [pk] AUTO_INCREMENT
+        - name varchar (50)
+    2) users
+        - id int [pk] AUTO_INCREMENT
+        - full_name varchar (50)
+        - email varchar (150)
+        - phone_number varchar(20)
+        - address varchar(200)
+        - password varchar(32) -> md5
+        - role_id int foreign key -> role(id)
+    3) thương hiệu -> brands
+        - id int [pk] AUTO_INCREMENT
+        - name varchar (100)
+    4) danh mục sản phẩm -> categories
+        - id int [pk] AUTO_INCREMENT
+        - name varchar (100)
+    5) sản phẩm -> products
+        - id int [pk] AUTO_INCREMENT
+        - category_id int foreign key -> category(id)
+        - brand_id int foreign key -> brand(id)
+        - name varchar (200)
+        - gia_goc float
+        - gia_ban float
+
+        - cpu varchar (200)
+        - ram varchar (200)
+        - o_cung varchar (200)
+        - man_hinh varchar (200)
+        - card_do_hoa varchar (200)
+        - Kich_thuoc_trong_luong varchar (200)
+        
+        - bao_hanh_xuat_xu varchar (200)
+        - anh varchar (200)
+        - ngay_tao varchar (200)
+        - ngay_sua varchar (200)
+    6) phản hồi -> feedbacks
+        - id int [pk] AUTO_INCREMENT
+        - full_name varchar (50)
+        - phone_number varchar(20)
+        - email varchar (150)
+        - node varchar (500)
+    7) đơn hàng -> orders
+        - id int [pk] AUTO_INCREMENT
+        - user_id int foreign key users(id)
+        - full_name varchar (50)
+        - phone_number varchar(20)
+        - email varchar (150)
+        - address varchar(200)
+        - node varchar (500)
+        - order_date datetime
+        - status int
+    8) chi tiết đơn hàng -> order_details
+        - id int [pk] AUTO_INCREMENT
+        - order_id int foreign key orders(id)
+        - product_id int foreign key products(id)
+        - price int
+        - so_luong int -> số lượng sản phẩm 
+    
+    
+    

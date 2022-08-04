@@ -1,0 +1,328 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* start header//////////////////////////////////// */
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.menu {
+    height: 54px;
+    background-color: #123d69;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.menu>li {
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+    opacity: 0.9;
+}
+
+.active,
+.menu>li:hover>a,
+.menu>li:hover {
+    background-color: #0186cf;
+    opacity: 1;
+}
+
+.menu>li>a {
+    display: inline-block;
+    color: #fff;
+    padding: 18px;
+}
+
+
+.menu>li>.subnav {
+    display: none;
+    position: absolute;
+}
+
+.nav1:hover>.subnav,
+.nav2:hover>.subnav,
+.nav3:hover>.subnav,
+.nav4:hover>.subnav,
+.nav5:hover>.subnav {
+    display: block;
+}
+
+.menu>li>.subnav {
+    background-color: #f3f3f3;
+}
+
+.subnav>li {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #dedede;
+}
+
+.subnav>li>a {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    color: black;
+    padding: 18px;
+}
+
+.subnav>li:hover>a {
+    color: #0186CF;
+}
+
+.nav5>.subnav,
+.nav1>.subnav,
+.nav2>.subnav {
+    width: 180px;
+}
+
+.nav4>.subnav {
+    width: 192px;
+}
+
+.nav3>.subnav {
+    width: 114px;
+}
+
+/* end haeader//////////////////////////////////// */
+
+main {
+    padding: 0px 205px;
+    margin-top: 100px;
+}
+
+.title_red,
+.gia {
+    color: #C42525;
+    font-weight: bold;
+}
+
+/* start khuyenmaihot//////////////////////////////////// */
+#KMH {
+    margin-bottom: 40px;
+}
+
+.anhtitle {
+    width: 40px;
+    height: 40px;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.titlekm {
+    display: inline-block;
+    padding: 5px 35px 10px 10px;
+    border: 3px solid #123d69;
+}
+
+
+.spkm {
+    border: 4px solid #123d69;
+    padding: 20px 22px;
+}
+
+.anh_info {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.anh_info:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.anh {
+    width: 250px;
+    height: 186px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 8px;
+}
+
+a.namesp {
+    color: black;
+}
+
+a.namesp:hover {
+    color: #0186CF;
+}
+
+.gia {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.cpu {
+    font-size: 13px;
+}
+
+/* endkhuyenmaihot//////////////////////////////////// */
+
+/* Start Danh Muc Noi Bat//////////////////////////////////// */
+#DMNB {
+    margin-bottom: 40px;
+}
+
+#DMNB>#titleDMNB {
+    margin-bottom: 15px;
+}
+
+.list_DMKM>.list_item_DMKM {
+    display: flex;
+    height: 90px;
+}
+
+.list_item_DMKM>li {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.list_item_DMKM>li>a {
+    display: inline-block;
+    color: #333;
+    padding: 35px 46px;
+}
+
+/* End Danh Muc Noi Bat//////////////////////////////////// */
+
+/* Start thuong hieu//////////////////////////////////// */
+.thuong_hieu {
+    margin-bottom: 40px;
+}
+
+.list_TH {
+    justify-content: center;
+}
+
+.list_item_TH {
+    height: 74px;
+    display: flex;
+}
+
+.title_thuong_hieu {
+    margin-bottom: 15px;
+}
+
+.list_item_TH>li>a>img {
+    display: inline-block;
+    height: 54px;
+    width: auto;
+}
+
+.list_item_TH>li>a {
+    display: inline-block;
+    padding: 10px 70px;
+    border: 1px solid rgba(0, 0, 0, 0.05)
+}
+
+.list_item_TH>li>a:hover {
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 15%);
+}
+
+.Apple>.apple {
+    margin: 7px 0px;
+    width: 149px;
+    height: 40px;
+}
+
+/* End thuong hieu//////////////////////////////////// */
+
+/* Start Laptop//////////////////////////////////// */
+
+.container {
+    display: flex;
+    height: 455px;
+    background-color: #1d73ac;
+    margin-bottom: 40px;
+    padding: 30px 20px 30px 0px;
+}
+
+.box_left {
+    display: inline-block;
+}
+
+.container>.box_left {
+    padding: 0px 20px;
+    color: #fff;
+    text-align: center;
+    width: 327px;
+}
+
+.box_left>img {
+    width: 287px;
+}
+
+.box_left>h2 {
+    font-size: 29px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.box_right {
+    width: 100%;
+}
+
+.box_right_top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.box_right_top_left>a {
+    margin-right: 30px;
+}
+
+.box_right_top a {
+    color: #fff;
+}
+
+.box_right_top a:hover {
+    text-decoration: underline;
+}
+
+.box_right_bot {
+    height: 361px;
+    border: 4px solid #113d69;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.box_right_bot>.anh_info {
+    padding: 0px 5px;
+}
+
+.box_right_bot>.anh_info img {
+    width: 232px;
+    height: 176px;
+}
+
+/* End Laptop//////////////////////////////////// */

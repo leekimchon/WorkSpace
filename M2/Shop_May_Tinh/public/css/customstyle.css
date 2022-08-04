@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+    color: black;
+  }
+main{
+  margin-top: 24px;
+}
+.err{
+  color: #FF0000;
+}
+
+.alert-success{
+  margin: 0px;
+  display: inline-block;
+  padding: 3px 6px;
+}
+.has-err{
+  color: red;
+}
+.img_products_admin{
+  height: 50px;
+}

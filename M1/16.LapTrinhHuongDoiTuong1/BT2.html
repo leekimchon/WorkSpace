@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(Do){
+                this.Do_c=Do;
+            };
+
+            getDoF(){
+                return (this.Do_c*1.8 + 32);
+            };
+            getDoK(){
+                return (this.Do_c +273.15);
+            };
+        };
+        var Do_C1=new Temperature(parseFloat(prompt('Nhap do C')));
+        document.write(Do_C1.Do_c+' C = '+Do_C1.getDoF()+' F'+'<br>');
+        document.write(Do_C1.Do_c+' C = '+Do_C1.getDoK()+' k'+'<br>');
+        console.log(Do_C1.Do_c)
+    </script>
+</body>
+</html>

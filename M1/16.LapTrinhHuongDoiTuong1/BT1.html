@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="ve" style="border: 1px solid;"></canvas>
+
+    <script>
+        class Rectangle {
+            constructor(Dai, Rong,){
+                this.dai=Dai;
+                this.rong=Rong;
+            };
+
+            getDienTich(){
+                return this.dai*this.rong;
+            };
+            getChuVi(){
+                return (this.dai+this.rong)*2;
+            };
+        };
+
+        var chunhat=new Rectangle(parseFloat(prompt('Nhap chieu dai')),parseFloat(prompt('Nhap chieu rong')))
+        document.getElementById('ve').width=chunhat.dai;
+        document.getElementById('ve').height=chunhat.rong;
+        document.write('<br>');
+        document.write('Dien tich = '+chunhat.getDienTich()+'Px'+'<br>');
+        document.write('Chu vi = '+chunhat.getChuVi()+'Px');
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+BEGIN
+INPUT n
+i = 1
+WHILE(i =< n)
+DO 
+	INPUT A(i)
+	i++
+END DO
+max = a(1)
+WHILE(i =< n)
+DO
+	 IF(A(i) >= max)
+		max = A(i)
+END DO
+DISLAY max
+END

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Tra cứu từ điển</h2>
+    <input type="text" id="nhap">
+    <button onclick="dclick()">Search</button>
+    <div id="xuat"></div>
+    <script>
+        function dclick() {
+            var a = ['red', 'blue', 'white'];
+            var b = ['đỏ', 'xanh da trời', 'trắng'];
+            var c = document.getElementById('nhap').value;
+            var found = -1;
+            for (var i = 0; i < a.length; i++) {
+                if (c == a[i]) {
+                    found = i;
+                }
+            }
+            if (found !== -1) {
+                document.getElementById('xuat').innerHTML = a[found] + ':' + b[found];
+            } else {
+                document.getElementById('xuat').innerHTML = 'Không tìm thấy';
+            }
+        }
+    </script>
+</body>
+
+</html>

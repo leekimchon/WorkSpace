@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseFloat(prompt('Nhap so phan tu trong mang'));
+        var arr1=[];
+        for(var i=0; i<n; i++){
+            var a=i+1;
+            arr1[i]=parseFloat(prompt('Nhập phần tử thứ '+a))
+        }
+        document.write('Mảng xuôi = '+arr1+'<br>');
+        var arr2=[];
+        var k=0;
+        for(var i=0; i<n; i++){
+            k++;
+            arr2[i]=arr1[n-k];
+        }
+        document.write('Mảng ngược = '+arr2);
+    </script>
+</body>
+</html>

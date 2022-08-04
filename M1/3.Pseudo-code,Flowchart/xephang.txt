@@ -1,0 +1,13 @@
+BEGIN
+INPUT diem
+IF diem >= 75
+	loai = loai A
+IF ELSE 65 <= diem < 75
+	loai = loai B
+IF ELSE 45 <= diem < 65
+	loai = loai C
+IF ELSE 35 >= diem > 45
+	loai = loai D
+IF ELSE diem < 35
+	loai = loai E
+END

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show(a){
+            a=parseInt(a)
+            console.log(typeof a)
+            if( isNaN(a)){
+                return true;
+            }else{
+                return false;
+            };
+        };
+        var a=prompt('nhap x');
+        if(show(a)==false){
+            alert(a+' la ky tu so');
+        }else{
+            alert(a+' khong phai la ky tu so');
+        }
+    </script>
+</body>
+</html>

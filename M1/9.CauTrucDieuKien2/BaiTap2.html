@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="thang" type="text" placeholder="Nhập tháng">
+    <button onclick="songay()">Tính số ngày</button>  
+    <div id="show"></div>
+    <script>
+        function songay(){
+            var thang=document.getElementById('thang').value;
+            thang=parseFloat(thang);
+            switch(thang){
+                case 1:
+                case 3:
+                case 12:
+                case 10:
+                case 5:
+                case 8:
+                case 7:
+                    document.getElementById('show').innerHTML='Tháng '+thang+' có 31 ngày';
+                    break;
+                case 2:
+                    document.getElementById('show').innerHTML='Tháng '+thang+' có 29 ngày';
+                    console.log('có 29 ngày');
+                    break;
+                case 4:
+                case 11:
+                case 6:
+                case 9:
+                    document.getElementById('show').innerHTML='Tháng '+thang+' có 30 ngày';
+                    break;
+                default:
+                    document.getElementById('show').innerHTML='Không có tháng '+thang;
+                    break;
+            };
+        };
+    </script>
+</body>
+</html>

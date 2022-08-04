@@ -1,0 +1,30 @@
+td{
+    width:40px;
+    height:40px;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid rgb(185, 185, 185);
+}
+table{
+    margin: auto;
+    border-spacing: 0px;
+}
+button{
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #ff5b18;
+    margin-bottom: 10px;
+}
+button:hover{
+    background-color: blueviolet;
+}
+div{
+    text-align: center;
+    margin-bottom: 10px;
+}
+td:hover{
+    background-color: rgb(255, 232, 223);
+    cursor: pointer;
+}

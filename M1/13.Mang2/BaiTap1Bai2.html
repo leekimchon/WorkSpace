@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = prompt('nhap');
+        var result = [num[0]];
+        for (var i = 1; i < num.length; i++) {
+            if ((num[i-1] % 2 == 0) && (num[i] % 2 == 0)) {
+                result.push('-', num[i]);
+            }
+            else {
+                result.push(num[i]);
+            }
+        }
+        console.log(result.join(''));
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+table{
+    margin: auto;
+}
+td{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(119, 255, 107);
+    border-radius: 50%;
+    font-size: 25px;
+}
+td:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+button{
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #ff5b18;
+    margin-bottom: 10px;
+}
+div{
+    text-align: center;
+}
+button:hover{
+    background-color: blueviolet;
+}
+#timso{
+    display: inline-block;
+}
+#thanh1{
+    border-radius: 8px;
+    background-color: #ddd;
+    width: 530px;
+    margin:auto;
+    margin-bottom: 10px;
+}
+#thanh2{
+    border-radius: 8px;
+    background-color: #4CAF50;
+    width: 1px;
+    height: 5px;
+}

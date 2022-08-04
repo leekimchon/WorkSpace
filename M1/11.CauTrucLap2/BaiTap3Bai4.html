@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fibo(n) {
+            var f0 = 0, f1 = 1, fn = 1;
+            for (var j = 0; j < n; j++) {
+                f0 = f1;
+                f1 = fn;
+                fn = f0 + f1;
+            }
+            return fn;
+        }
+        var n = 100;
+        for (var i = 0; i < n; i++) {
+            fibo(i);
+            if (fibo(i) % 5 == 0) {
+                document.write(fibo(i) + ' là số đầu tiên trong dãy fibonacci chia hết cho 5');
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

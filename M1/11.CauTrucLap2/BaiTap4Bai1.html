@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseFloat(prompt('Bạn muốn in bao nhiêu số trong dãy Fibonacci'));
+        for(i=0; i<n; i++){
+            var f0=0, f1=1, fn=1;
+            if(i==0 || i==1){
+                document.write(i+' ');
+            }else{
+                for(var j=2; j<i; j++){
+                    f0=f1;
+                    f1=fn;
+                    fn=f0+f1;
+                }
+                document.write(fn+' ');
+            }
+        }
+    </script>
+</body>
+</html>
