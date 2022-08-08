@@ -18,11 +18,15 @@ class LoginController extends Controller
             'password' => $request->password
         ];
         if(Auth::attempt($credentials)){
-            return 'da dang nhap';
+            return redirect()->route('home');
         }else{
             return back()->withErrors([
                 'err_login' => 'Tài khoản hoặc mật khẩu không đúng',
             ])->onlyInput('err_login');
         }
+    }
+    function logout(){
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

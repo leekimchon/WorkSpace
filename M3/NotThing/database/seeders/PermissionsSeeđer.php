@@ -63,5 +63,90 @@ class PermissionsSeeđer extends Seeder
             'parent_id' => 6,
             'key_code' => 'delete_product'
         ]);
+
+        DB::table('permissions')->insert([
+            'name' => 'Slider',
+            'parent_id' => 0
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xem Slider',
+            'parent_id' => 11,
+            'key_code' => 'list_slider'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Thêm Slider',
+            'parent_id' => 11,
+            'key_code' => 'add_slider'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Sửa Slider',
+            'parent_id' => 11,
+            'key_code' => 'edit_slider'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xóa Slider',
+            'parent_id' => 11,
+            'key_code' => 'delete_slider'
+        ]);
+
+        DB::table('permissions')->insert([
+            'name' => 'Tài khoản',
+            'parent_id' => 0
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xem Tài khoản',
+            'parent_id' => 16,
+            'key_code' => 'list_user'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Thêm Tài khoản',
+            'parent_id' => 16,
+            'key_code' => 'add_user'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Sửa Tài khoản',
+            'parent_id' => 16,
+            'key_code' => 'edit_user'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xóa Tài khoản',
+            'parent_id' => 16,
+            'key_code' => 'delete_user'
+        ]);
+
+        DB::table('permissions')->insert([
+            'name' => 'Quyền',
+            'parent_id' => 0
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xem Quyền',
+            'parent_id' => 21,
+            'key_code' => 'list_role'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Thêm Quyền',
+            'parent_id' => 21,
+            'key_code' => 'add_role'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Sửa Quyền',
+            'parent_id' => 21,
+            'key_code' => 'edit_role'
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xóa Quyền',
+            'parent_id' => 21,
+            'key_code' => 'delete_role'
+        ]);
+
+        DB::table('permissions')->insert([
+            'name' => 'Trang chủ admin',
+            'parent_id' => 0
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'Xem Trang chủ',
+            'parent_id' => 26,
+            'key_code' => 'list_home'
+        ]);
     }
 }

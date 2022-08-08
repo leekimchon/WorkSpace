@@ -81,7 +81,7 @@
 @section('js')
     <script>
         $(function() {
-            $(document).on('keyup', '#search', function() {
+            $('#search').on('keyup' , function() {
                 var search = $(this).val();
                 var url = $(this).data('url')
                 $.ajax({

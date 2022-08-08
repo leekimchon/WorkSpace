@@ -5,8 +5,13 @@
     <div class="top_nav">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="top_nav_left">free shipping on all u.s orders over $50</div>
+                <div class="col-md-3">
+                    <div class="top _nav_left">{{ Auth::user()->name ?? '' }}</div>
+                </div>
+                <div class="col-md-3">
+                    @can('list_home')
+                    <a href="{{ route('home.index') }}" class="top_nav_left">Trang quản trị</a>
+                    @endcan
                 </div>
                 <div class="col-md-6 text-right">
                     <div class="top_nav_right">
@@ -44,8 +49,12 @@
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="account_selection">
-                                    <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-                                    <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+                                    @if(Auth::check())
+                                    <li><a href="{{ route('login.logout') }}"><i class="fa fa-user-in" aria-hidden="true"></i>Đăng xuất</a></li>
+                                    @else
+                                    {{-- <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li> --}}
+                                    <li><a href="{{ route('login.index') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>Đăng nhập</a></li>
+                                    @endif
                                 </ul>
                             </li>
                         </ul>
