@@ -38,6 +38,7 @@ Route::prefix('admin')->group(function(){
         Route::post('/update/{id}', [CategoryController::class, 'update'])->name('categories.update');
         Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('categories.delete')->middleware('can:delete_categories');
     });
+    
     // /product
     Route::prefix('product')->group(function(){
         Route::get('/', [ProductController::class, 'index'])->name('product.index')->middleware('can:list_product');
