@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row text-center">
+        <h1>Danh sach cuon sach</h1>
+    </div>
+    <div class="row ">
+        <div class="col-8">
+            <h3>co 3 cuon sach</h3>
+        </div>
+        <div class="col-4 text-end">
+            <a href="" routerLink="/book/create/" class="btn btn-primary">Them sach moi</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <th scope="row">{{ book.id }}</th>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        <a href="#" [routerLink]="['/book/', book.id, 'view']" class="btn btn-info">Xem</a> |
+                        <a href="#" [routerLink]="['/book/', book.id, 'edit']" class="btn btn-primary">Sua</a> |
+                        <button type="button" (click)="deleteStudent(book.id)" class="btn btn-danger">Xoa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
